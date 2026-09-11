@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echo — Premium Music Player</title>
+<meta name="description" content="Echo — a dark, premium music player UI built with vanilla HTML, CSS and JavaScript.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="bg-glow" aria-hidden="true"></div>
+<main class="player-wrap">
+  <header class="brand">
+    <h1 class="gradient-text">Echo<span>.</span></h1>
+    <p class="tagline">Premium Music Player UI</p>
+  </header>
+
+  <section class="player glass" aria-label="Music player">
+    <div class="vinyl" aria-hidden="true"></div>
+
+    <div class="track-meta">
+      <h2 id="track-title">Midnight Drive</h2>
+      <p id="track-artist">Neon Wave</p>
+    </div>
+
+    <div class="eq" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="progress-zone">
+      <span id="time-cur">0:00</span>
+      <div class="progress" id="progress" role="slider" aria-label="Seek position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <span id="time-total">3:42</span>
+    </div>
+
+    <div class="controls">
+      <button id="btn-shuffle" class="ctrl small" aria-label="Shuffle" aria-pressed="false" title="Shuffle">&#128256;</button>
+      <button id="btn-prev" class="ctrl" aria-label="Previous track">&#9198;</button>
+      <button id="btn-play" class="ctrl play" aria-label="Play or pause" aria-pressed="false">&#9654;</button>
+      <button id="btn-next" class="ctrl" aria-label="Next track">&#9197;</button>
+      <button id="btn-repeat" class="ctrl small" aria-label="Repeat" aria-pressed="false" title="Repeat">&#128257;</button>
+    </div>
+
+    <ul class="playlist" id="playlist" aria-label="Playlist"></ul>
+  </section>
+
+  <footer class="foot">
+    <p>Built with vanilla HTML &middot; CSS &middot; JS — no frameworks, no CDN.</p>
+  </footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
